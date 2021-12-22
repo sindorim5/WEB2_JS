@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<h1>Object</h1>
+		<h2>Create</h2>
+		<script>
+			var aespa = {
+				"member" : "karina",
+				"producer" : "soo-man"
+			};
+			document.write("member : "+aespa.member+"<br>");
+			document.write("producer : "+aespa.producer+"<br>");
+			aespa.armamenter = "winter";
+			document.write("armamenter : "+aespa.armamenter+"<br>");
+			aespa["E.D Hacker"] = "ningning";
+			document.write("E.D Hacker : "+aespa["E.D Hacker"]+"<br>");
+		</script>
+		<h2>Iterate</h2>
+		<script>
+			for(var key in aespa) {
+				document.write(key+'<br>');
+			}
+			document.write('<br>');
+			for(var key in aespa) {
+				document.write(key+' : '+aespa[key]+'<br>');
+			}
+		</script>
+		<h2>Country</h2>
+		<script>
+			var countries = {};
+			countries.asia = "korea";
+			countries.europe = "england";
+			for(var key in countries) {
+				document.write(key+' : '+countries[key]+'<br>');
+			}
+		</script>
+		<h2>Property & Method</h2>
+		<script>
+			aespa.showAll = function(){
+				for(var key in this) {
+					document.write(key+' : '+this[key]+'<br>');
+				}
+			}
+		</script>
+	</body>
+</html>
